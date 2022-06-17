@@ -6,7 +6,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
-import Icon from "./addShopSvg.svg";
 import { useDispatch } from "react-redux";
 import { addShop, updateShop } from "../../../features/shop/shopSlice";
 import dayjs from "dayjs";
@@ -18,6 +17,7 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
+import Icon from "./addShopSvg.svg";
 
 const useStyles = makeStyles((theme) => ({
   addStoreFormContainer: {
@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function AddShop({ data, setIsModal }) {
+export default function AddUpdateShop({ data, setIsModal }) {
   const dispatch = useDispatch();
   const classes = useStyles();
   if (data === undefined) {
@@ -104,7 +104,7 @@ export default function AddShop({ data, setIsModal }) {
     "Butcher",
     "Baker",
     "Chemist",
-    "Stationery",
+    "Stationery shop",
   ];
   const AREAS = [
     "Pune",
@@ -118,9 +118,9 @@ export default function AddShop({ data, setIsModal }) {
   return (
     <Container component="main" maxWidth="sm">
       <Box className={classes.addStoreFormContainer}>
-        <img width={50} src={Icon} alt="add shop" />
+        <Box component="img" mb={2} width={50} src={Icon} alt="add shop" />
         <Typography component="h1" variant="h5">
-          Add Shop
+          {Object.keys(data).length === 0 ? "Add" : "Update"} Shop
         </Typography>
         <Box
           component="form"

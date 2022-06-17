@@ -7,6 +7,7 @@ import {
   ThemeProvider,
   responsiveFontSizes,
 } from "@mui/material/styles";
+
 let theme = createTheme({
   palette: {
     primary: {

@@ -1,10 +1,11 @@
-import { Divider, Grid } from "@mui/material";
 import React from "react";
+import { Divider, Grid } from "@mui/material";
 import Header from "./Header/Header";
 import Filter from "./Filters/Filter";
 import ShopBody from "./ShopBody/ShopBody";
 import Modal from "../Modal";
 import Footer from "./Footer/Footer";
+
 const ShopList = () => {
   return (
     <>
@@ -24,7 +25,6 @@ const ShopList = () => {
         >
           <Filter />
         </Grid>
-        {/* <Divider orientation="vertical" flexItem /> */}
         <Grid
           boxSizing="border-box"
           height="90vh"

@@ -1,6 +1,6 @@
-import { Button, Grid, Paper } from "@mui/material";
-import { Box } from "@mui/system";
 import React, { useEffect, useState } from "react";
+import { Button, Grid } from "@mui/material";
+import { Box } from "@mui/system";
 import { useDispatch, useSelector } from "react-redux";
 import { selectShops } from "../../../features/shop/shopSlice";
 import AddBusinessIcon from "@mui/icons-material/AddBusiness";
@@ -13,8 +13,9 @@ import {
   toggleModal,
 } from "../../../features/util/utilSlice";
 import Filter from "../Filters/Filter";
-import AddShop from "../Forms/AddShop";
+import AddUpdateShop from "../Forms/AddUpdateShop";
 import ShopCard from "./ShopCard";
+
 const ShopBody = () => {
   const dispatch = useDispatch();
   const [localShops, setLocalShops] = useState([]);
@@ -89,7 +90,7 @@ const ShopBody = () => {
             <Grid item>
               <Button
                 onClick={() => {
-                  dispatch(setModalContent(AddShop));
+                  dispatch(setModalContent(AddUpdateShop));
                   dispatch(toggleModal());
                 }}
                 variant="contained"

@@ -6,6 +6,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 import logo from "./logo.png";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchText } from "../../../features/util/utilSlice";
+
 const Header = () => {
   const dispatch = useDispatch();
   const { searchText } = useSelector((store) => {
@@ -25,7 +26,14 @@ const Header = () => {
           alignItems="center"
           item
           marginBottom={{ xs: 2, sm: 2, md: 0 }}
-          sx={{ fontSize: "2rem", fontWeight: "bold" }}
+          fontSize="2rem"
+          fontWeight="bold"
+          sx={{
+            cursor: "pointer",
+            "&:active": {
+              transform: "scale(0.99)",
+            },
+          }}
         >
           <img src={logo} alt="logo" width="30px" />
           <Box component="span" color="primary.main" sx={{ marginLeft: "4px" }}>

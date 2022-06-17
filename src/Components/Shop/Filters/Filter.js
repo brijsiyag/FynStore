@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { clearFilter, setFilter } from "../../../features/util/utilSlice";
 import FilterForm from "./FilterForm";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
+
 const Filter = () => {
   const dispatch = useDispatch();
   const { filters } = useSelector((store) => {
@@ -58,6 +59,7 @@ const Filter = () => {
               dispatch(clearFilter({ type: "Area" }));
               dispatch(setFilter({ type: "Status", value: "all" }));
             }}
+            lineHeight={1.5}
           >
             Reset Filters
           </Box>
