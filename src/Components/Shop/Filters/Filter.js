@@ -25,6 +25,7 @@ const Filter = () => {
         container
         overflow="scroll"
         flexDirection="column"
+        flexWrap="nowrap"
         padding={2}
       >
         <Grid
@@ -65,13 +66,7 @@ const Filter = () => {
           </Box>
         </Grid>
         <Divider />
-        <Grid
-          item
-          marginTop={2}
-          overflow="scroll"
-          flexBasis="90%"
-          // display={{ xs: "none", sm: "initial" }}
-        >
+        <Grid item marginTop={2} overflow="scroll" flexGrow={1}>
           <Box sx={{ fontSize: "1rem", fontWeight: "500", color: "gray" }}>
             Status
           </Box>

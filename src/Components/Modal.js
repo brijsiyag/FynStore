@@ -18,6 +18,7 @@ const style = {
   boxShadow: "white 0 0 5px 0.5px",
   p: 4,
   minWidth: "min(70vw,500px)",
+  maxWidth: "80vw",
   borderRadius: "5px",
   overflow: "scroll",
 };

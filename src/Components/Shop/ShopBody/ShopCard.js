@@ -22,7 +22,7 @@ import AddShop from "../Forms/AddUpdateShop";
 export default function ShopCard({ data }) {
   const dispatch = useDispatch();
   return (
-    <Card sx={{ shadow: 2 }}>
+    <Card sx={{ shadow: 2, cursor: "pointer" }}>
       <CardMedia
         component="img"
         height="194"

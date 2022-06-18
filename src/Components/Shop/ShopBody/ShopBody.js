@@ -50,7 +50,7 @@ const ShopBody = () => {
 
   return (
     <>
-      <Grid container flexDirection="column" height="100%">
+      <Grid container flexDirection="column" height="100%" flexWrap="nowrap">
         <Grid
           item
           justifyContent={{ xs: "space-around", md: "space-between" }}
